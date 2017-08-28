@@ -1,0 +1,24 @@
+{
+  "name": "ua-resolver",
+  "version": "1.0.0",
+  "description": "Resolve user agent to browser os and device",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [],
+  "author": "Rahul Shukla rahul@wootag.com",
+  "license": "ISC",
+  "bugs": {
+  },
+  "dependencies": {
+    "express": "^4.15.3",
+    "lodash": "^4.17.4",
+    "ua-parser-js": "^0.7.14",
+    "winston": "^2.3.1"
+  }
+}

@@ -12,7 +12,16 @@ app.get('/', function (req, res) {
 
 app.get('/ua/:ua', function (req, res) {
     logger.info('resolving : ' + req.params.ua);
-    res.send(uaParser(req.params.ua));
+    let info = uaParser(req.params.ua);
+    if (!info.device.type) {
+        if ('Android' === info.os.name) {
+            info.device.type = 'mobile';
+        }
+        else {
+            info.device.type = 'PC';
+        }
+    }
+    res.send(info);
 });
 
 
